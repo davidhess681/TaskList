@@ -18,6 +18,7 @@ namespace TaskList
             {
                 StreamReader sr = new StreamReader(path);
                 string line = sr.ReadLine();
+                int lineNumber = 1;
                 while (line != null)
                 {
                     try
@@ -29,12 +30,30 @@ namespace TaskList
                         bool comp = bool.Parse(split[3]);
 
                         Task task = new Task(name, desc, duedate, comp);
+                        Menu.TaskList.Add(task);
+
+                        line = sr.ReadLine();
+                        lineNumber++;
                     }
                     catch
                     {
+                        Console.WriteLine("Error at line " + lineNumber);
 
+                        line = sr.ReadLine();
+                        lineNumber++;
                     }
                 }
+                sr.Close();
+                Console.WriteLine("File loaded successfully!");
+
+            }
+            else
+            {
+                Task defaultTask = new Task("Me", "Add a task", DateTime.Now, true);
+                Menu.TaskList.Add(defaultTask);
+
+                UpdateFile();
+                Console.WriteLine("Created new file 'task_list.txt'");
             }
         }
         public static void UpdateFile()
