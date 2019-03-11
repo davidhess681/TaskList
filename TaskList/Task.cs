@@ -20,12 +20,12 @@ namespace TaskList
 
         public string Print()
         {
-            string formatTask = $"{IsComplete} \t {DueDate} \t {Name} \t {Description}";
+            string formatTask = $"{IsComplete} \t {DueDate} \t {Name} \t\t {Description}";
             return formatTask;
         }
         public string Print(int index)
         {
-            string formatTask = $"{index}. {IsComplete} \t {DueDate} \t {Name} \t {Description}";
+            string formatTask = $"{index}. \t {IsComplete} \t {DueDate} \t {Name} \t\t {Description}";
             return formatTask;
         }
         public string PrintToFile()

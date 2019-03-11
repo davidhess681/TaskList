@@ -9,7 +9,7 @@ namespace TaskList
     class Menu
     {
         static bool ReturnToMenu = true;
-        public static List<Task> TaskList;
+        public static List<Task> TaskList = new List<Task>();
 
         static Task GetTask()
         {
@@ -19,14 +19,14 @@ namespace TaskList
 
             // display task
             Task task = TaskList[index - 1];
-            task.Print(index);
+            Console.WriteLine(task.Print(index));
 
             return task;
         }
 
         public static void MainMenu()
         {
-            TaskList = new List<Task>();
+            //TaskList = new List<Task>();
             Console.WriteLine("Welcome to the Task Manager!");
 
             while (ReturnToMenu)
@@ -72,7 +72,7 @@ namespace TaskList
                 Console.WriteLine("\nLIST TASKS");
 
                 // list all tasks
-                Console.WriteLine("# \t Done? \t Due Date \t Team Member \t Description \n");
+                Console.WriteLine("# \t Done? \t Due Date \t\t Team Member \t Description \n");
                 foreach (Task task in TaskList)
                 {
                     Console.WriteLine(task.Print(index));
@@ -143,6 +143,8 @@ namespace TaskList
             if (Input.YesOrNo())
             {
                 ReturnToMenu = false;
+                IO.UpdateFile();
+                Console.WriteLine("File updated successfully! Press any key to close.");
             }
         }
     }

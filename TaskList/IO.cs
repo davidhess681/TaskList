@@ -26,8 +26,9 @@ namespace TaskList
                         string[] split = line.Split(';');
                         string name = split[0];
                         string desc = split[1];
-                        DateTime duedate = DateTime.Parse(split[2]);
-                        bool comp = bool.Parse(split[3]);
+                        bool comp = bool.Parse(split[2]);
+                        DateTime duedate = DateTime.Parse(split[3]);
+
 
                         Task task = new Task(name, desc, duedate, comp);
                         Menu.TaskList.Add(task);

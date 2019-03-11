@@ -43,11 +43,12 @@ namespace TaskList
         {
             while (true)
             {
-                if (Console.ReadLine().ToLower() == "y")
+                string input = Console.ReadLine().ToLower();
+                if (input == "y")
                 {
                     return true;
                 }
-                if (Console.ReadLine().ToLower() == "n")
+                if (input == "n")
                 {
                     return false;
                 }

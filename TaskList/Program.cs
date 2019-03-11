@@ -10,6 +10,10 @@ namespace TaskList
     {
         static void Main(string[] args)
         {
+            IO.ReadFile();
+            Menu.MainMenu();
+
+            Console.ReadKey();
         }
     }
 }

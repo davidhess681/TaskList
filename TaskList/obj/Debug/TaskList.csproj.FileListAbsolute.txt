@@ -1,0 +1,7 @@
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\bin\Debug\TaskList.exe.config
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\bin\Debug\TaskList.exe
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\bin\Debug\TaskList.pdb
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\obj\Debug\TaskList.csprojAssemblyReference.cache
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\obj\Debug\TaskList.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\obj\Debug\TaskList.exe
+C:\Users\David\source\repos\Daily Programmer\TaskList\TaskList\obj\Debug\TaskList.pdb
